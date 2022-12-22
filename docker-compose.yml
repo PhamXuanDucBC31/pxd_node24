@@ -5,10 +5,10 @@ services:
     container_name: mysql_db
     env_file: .env
     environment:
-      - MYSQL_ROOT_PASSWORD=$DB_PASS
-      - MYSQL_DATABASE=$DB_NAME
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=db_node24
     ports:
-      - $DB_PORT:$DB_PORT
+      - 3306:3306
     volumes:
       - mysql_db:/var/lib/mysql
     networks:
@@ -21,10 +21,11 @@ services:
     env_file: .env
     environment:
       - DB_HOST:mysql_db
-      - DB_DIALECT=$DB_DIALECT
-      - DB_PORT=$DB_PORT
-      - DB_USER=$DB_USER
-      - DB_PASS=$DB_PASS
+      - DB_NAME:db_node24
+      - DB_DIALECT=mysql
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASS=1234
     ports:
       - "3030:3000"
     networks:
