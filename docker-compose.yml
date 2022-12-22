@@ -2,7 +2,7 @@ version: "3"
 services:
   mysql_db:
     image: mysql
-    container_name: mysql_db
+    container_name: mysql_db24
     env_file: .env
     environment:
       - MYSQL_ROOT_PASSWORD=1234
@@ -20,7 +20,7 @@ services:
     container_name: cons-prisma-v1
     env_file: .env
     environment:
-      - DB_HOST:mysql_db
+      - DB_HOST:mysql_db24
       - DB_NAME:db_node24
       - DB_DIALECT=mysql
       - DB_PORT=3306
