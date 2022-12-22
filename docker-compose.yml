@@ -15,7 +15,7 @@ services:
       - node-network
   app:
     depends_on:
-      - mysql_db
+      - mysql_db24
     build: .
     container_name: cons-prisma-v1
     env_file: .env
@@ -27,7 +27,7 @@ services:
       - DB_USER=root
       - DB_PASS=1234
     ports:
-      - "3030:3000"
+      - 3030:3000
     networks:
       - node-network
 volumes:
