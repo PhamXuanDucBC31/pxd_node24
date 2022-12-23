@@ -1,0 +1,935 @@
+{
+	"info": {
+		"_postman_id": "427f6961-4c88-43a1-ac19-632bca9db070",
+		"name": "node24_AirBnb_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23881399"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dog\",\r\n    \"pass_word\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/auth/login",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"caSiMyTam\",\r\n    \"email\": \"ahihi@gmail.com\",\r\n    \"pass_word\":\"454dsa\",\r\n    \"phone\":\"1225554475\",\r\n    \"birth_day\":\"04/12/1994\",\r\n    \"gender\":\"female\"\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/auth/signUp",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "GetUserInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/user/getUser",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostNewUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ahihiDoNgox\",\r\n    \"email\": \"ahihi12345@gmail.com\",\r\n    \"pass_word\":\"454dsa\",\r\n    \"phone\":\"1225554475\",\r\n    \"birth_day\":\"04/12/1994\",\r\n    \"gender\":\"female\",\r\n    \"role\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/user/postNewUser",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"postNewUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUSer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/user/deleteUser/5",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"deleteUser",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/user/getUserById/10",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getUserById",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "phan-trang-tim-kiem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/user/getUserPagination?pageIndex=1&pageSize=5&keyWord=a",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getUserPagination"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "keyWord",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ahihiDoNgox\",\r\n    \"email\": \"ahihi@gmail.com\",\r\n    \"pass_word\":\"454dsa\",\r\n    \"phone\":\"1225554475\",\r\n    \"birth_day\":\"04/12/1994\",\r\n    \"gender\":\"female\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/user/updateUser/25",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"updateUser",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserInfoByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/user/getUserInfoByName/cat",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getUserInfoByName",
+								"cat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadAvatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "upload",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domian}}/api/user/uploadAvatar/2",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"uploadAvatar",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "GetComment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/comment/getCommentList",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"comment",
+								"getCommentList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCommentByRoomId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comment/getCommentByRoomId/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comment",
+								"getCommentByRoomId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n    \"commentator_id\": 5,\r\n    \"room_id\": 3,\r\n    \"content\": \"phòng này cũng bình thường\",\r\n    \"comment_rate\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comment/postComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comment",
+								"postComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"okla\",\r\n    \"comment_rate\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comment/putComment/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comment",
+								"putComment",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"content\": \"okla\",\r\n    \"comment_rate\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comment/deleteComment/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comment",
+								"deleteComment",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "GetBookingList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/booking/getBookingList",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"getBookingList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookingById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/booking/getBookingById/5",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"getBookingById",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"room_id\":5,\r\n    \"checkin\":\"2022-12-18\",\r\n    \"checkout\":\"2022-12-20\",\r\n    \"numberOfGuest\": 5,\r\n    \"user_id\":7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/booking/postBooking",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"postBooking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBookingData",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"room_id\":5,\r\n    \"checkin\":\"2022-12-01\",\r\n    \"checkout\":\"2022-12-15\",\r\n    \"numberOfGuest\": 5,\r\n    \"user_id\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/booking/updateBookingData/8",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"updateBookingData",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBookingData",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/booking/deleteBookingData/7",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"booking",
+								"deleteBookingData",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "getRoomList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/room/getRoomList",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"getRoomList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createRoom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creator_id\":1,\r\n    \"location_id\":2,\r\n    \"room_name\":\"room17\",\r\n    \"capacity\": 5,\r\n    \"bed_room\":1,\r\n    \"bed\":1,\r\n    \"bath_room\":1,\r\n    \"description\":\"phòng sạch sẽ thoáng mát đầy đủ tiện nghi\",\r\n    \"price\":5,\r\n    \"washing_machine\": \"false\",\r\n    \"iron\":\"true\",\r\n    \"tv\":\"true\",\r\n    \"air_conditioner\":\"true\",\r\n    \"wifi\":\"true\",\r\n    \"kitchen\":\"true\",\r\n    \"parking_lot\":\"true\",\r\n    \"swimming_pool\":\"true\",\r\n    \"pic_description\":\"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/room/createRoom",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"createRoom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRoomByLocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/room/getRoomByLocation/1",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"getRoomByLocation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "phan-trang-tim-kiem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/room/getRoomPagination?pageIndex=2&pageSize=5&keyWord=1",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"getRoomPagination"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "keyWord",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRoomById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/room/getRoomById/55",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"getRoomById",
+								"55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRoomInfo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creator_id\":1,\r\n    \"location_id\":2,\r\n    \"room_name\":\"abc\",\r\n    \"capacity\": 5,\r\n    \"bed_room\":1,\r\n    \"bed\":1,\r\n    \"bath_room\":1,\r\n    \"description\":\"phòng sạch sẽ thoáng mát đầy đủ tiện nghi, giá cả phái chăng\",\r\n    \"price\":50,\r\n    \"washing_machine\": \"false\",\r\n    \"iron\":\"true\",\r\n    \"tv\":\"true\",\r\n    \"air_conditioner\":\"true\",\r\n    \"wifi\":\"true\",\r\n    \"kitchen\":\"false\",\r\n    \"parking_lot\":\"true\",\r\n    \"swimming_pool\":\"true\",\r\n    \"pic_description\":\"ahihihih\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/room/updateRoomInfo/5",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"updateRoomInfo",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRoom",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/room/deleteRoom/17",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"deleteRoom",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadRoomPic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "upload",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domian}}/api/room/uploadRoomPic/5",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"room",
+								"uploadRoomPic",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "getLocationList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/location/getLocationList",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"getLocationList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location_name\":\"string1111\",\r\n    \"province\":\"string21312\",\r\n    \"country\":\"string\",\r\n    \"descrption_img\":\"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/location/addLocation",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"addLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "phan-trang-tim-kiem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/location/getLocationPagination?pageIndex=1&pageSize=2&keyWord=a",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"getLocationPagination"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "keyWord",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLocationById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/location/getLocation/7",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"getLocation",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateLocationInfo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location_name\":\"20 Cộng Hoà, Phường 4, Quận Tân Bình\",\r\n    \"province\":\"Thành phố Hồ Chí Mính\",\r\n    \"country\":\"Việt Nam\",\r\n    \"descrption_img\":\"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domian}}/api/location/updateLocation/5",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"updateLocation",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLocation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domian}}/api/location/deleteLocation/655",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"deleteLocation",
+								"655"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadHinhViTri",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "upload",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domian}}/api/location/uploadLocationPic/2",
+							"host": [
+								"{{domian}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"uploadLocationPic",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "domian",
+			"value": "node.pxduc.name.vn"
+		}
+	]
+}
