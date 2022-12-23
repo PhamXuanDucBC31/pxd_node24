@@ -21,7 +21,7 @@ const login = async (req, res) => {
       if (pass_word != checkUser[0].pass_word) {
         failCode(res, "", "mật khẩu không đúng");
       } else {
-        successCode(res, "", "đăng nhập thành công");
+        successCode(res, checkUser, "đăng nhập thành công");
       }
     } else {
       failCode(res, "", "tài khoản không đúng");
